@@ -241,11 +241,17 @@ header h1 {
   align-items: center;
 }
 
-.message img {
+.message .profile {
   height: 30px;
   width: 30px;
   border-radius: 100%;
   margin-right: .5em;
+}
+.message .verified{
+    fill: #1da1f2;
+    height:13px;
+    margin-bottom:-1px;
+    margin-left: 2px;
 }
 
 .reply {
