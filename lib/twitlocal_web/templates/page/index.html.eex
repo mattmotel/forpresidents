@@ -32,76 +32,76 @@
      	l4.11,5.99l0.39-7.4l7.29-2.83l-7.09-2.3L128.4,11.42z"/>
      </svg>
   <h1>Twitter for Presidents</h1>
-  <a class="collapsible"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg> <span id="show" style="display:none;">Show</span><span id="hide">Hide</span> Replies</a></header>
+  <a class="collapsible"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg> <span id="show" style="display:none;">Show</span>
+  <span id="hide">Hide</span> Replies</a>
+</header>
 
-  <div class="post-tweet">
+<div class="post-tweet">
   <h2>Hello @<%= @conn.params["user"] %>!</h2>
-    <form id="chat-form">
-        <input type="hidden" value="<%= @conn.params["user"] %>" id="user-name"></input>
-        <textarea placeholder="Who has crossed you most recently?" id="user-msg"></textarea>
-        <button type="submit">Tweet</button>
-      </form>
-  </div>
+  <form id="chat-form">
+      <input type="hidden" value="<%= @conn.params["user"] %>" id="user-name"></input>
+      <textarea placeholder="Who has crossed you most recently?" id="user-msg"></textarea>
+      <button type="submit">Tweet</button>
+  </form>
+</div>
 
 <section class="go-home">
 
 <div id="recent-tweet">
 </div>
+
 <div id="chat-box" class=" column-reverse">
-  <%= for message <- @messages do %>
+    <%= for message <- @messages do %>
     <div class="tweet">
-      <div class="message">
-        <img src="https://pbs.twimg.com/profile_images/874276197357596672/kUuht00m_400x400.jpg" class="profile">
-        <span>
-        <b><%= message.name %></b><svg class="verified" x="0px" y="0px" viewBox="0 0 512 512">
-        <g>
-        	<path  d="M512,268c0,17.9-4.3,34.5-12.9,49.7c-8.6,15.2-20.1,27.1-34.6,35.4c0.4,2.7,0.6,6.9,0.6,12.6
-        		c0,27.1-9.1,50.1-27.1,69.1c-18.1,19.1-39.9,28.6-65.4,28.6c-11.4,0-22.3-2.1-32.6-6.3c-8,16.4-19.5,29.6-34.6,39.7
-        		C290.4,507,273.9,512,256,512c-18.3,0-34.9-4.9-49.7-14.9c-14.9-9.9-26.3-23.2-34.3-40c-10.3,4.2-21.1,6.3-32.6,6.3
-        		c-25.5,0-47.4-9.5-65.7-28.6c-18.3-19-27.4-42.1-27.4-69.1c0-3,0.4-7.2,1.1-12.6c-14.5-8.4-26-20.2-34.6-35.4
-        		C4.3,302.5,0,285.9,0,268c0-19,4.8-36.5,14.3-52.3c9.5-15.8,22.3-27.5,38.3-35.1c-4.2-11.4-6.3-22.9-6.3-34.3
-        		c0-27,9.1-50.1,27.4-69.1c18.3-19,40.2-28.6,65.7-28.6c11.4,0,22.3,2.1,32.6,6.3c8-16.4,19.5-29.6,34.6-39.7
-        		C221.6,5.1,238.1,0,256,0c17.9,0,34.4,5.1,49.4,15.1c15,10.1,26.6,23.3,34.6,39.7c10.3-4.2,21.1-6.3,32.6-6.3
-        		c25.5,0,47.3,9.5,65.4,28.6c18.1,19.1,27.1,42.1,27.1,69.1c0,12.6-1.9,24-5.7,34.3c16,7.6,28.8,19.3,38.3,35.1
-        		C507.2,231.5,512,249,512,268z M245.1,345.1l105.7-158.3c2.7-4.2,3.5-8.8,2.6-13.7c-1-4.9-3.5-8.8-7.7-11.4
-        		c-4.2-2.7-8.8-3.6-13.7-2.9c-5,0.8-9,3.2-12,7.4l-93.1,140L184,263.4c-3.8-3.8-8.2-5.6-13.1-5.4c-5,0.2-9.3,2-13.1,5.4
-        		c-3.4,3.4-5.1,7.7-5.1,12.9c0,5.1,1.7,9.4,5.1,12.9l58.9,58.9l2.9,2.3c3.4,2.3,6.9,3.4,10.3,3.4
-        		C236.6,353.7,241.7,350.9,245.1,345.1z"/>
-        </g>
-        </svg>:
-        <%= message.body %>
-      </span>
-      </div>
+    <div class="message">
+      <img src="https://pbs.twimg.com/profile_images/874276197357596672/kUuht00m_400x400.jpg" class="profile">
+      <span>
+      <b><%= message.name %></b><svg class="verified" x="0px" y="0px" viewBox="0 0 512 512">
+      <g>
+      	<path  d="M512,268c0,17.9-4.3,34.5-12.9,49.7c-8.6,15.2-20.1,27.1-34.6,35.4c0.4,2.7,0.6,6.9,0.6,12.6
+      		c0,27.1-9.1,50.1-27.1,69.1c-18.1,19.1-39.9,28.6-65.4,28.6c-11.4,0-22.3-2.1-32.6-6.3c-8,16.4-19.5,29.6-34.6,39.7
+      		C290.4,507,273.9,512,256,512c-18.3,0-34.9-4.9-49.7-14.9c-14.9-9.9-26.3-23.2-34.3-40c-10.3,4.2-21.1,6.3-32.6,6.3
+      		c-25.5,0-47.4-9.5-65.7-28.6c-18.3-19-27.4-42.1-27.4-69.1c0-3,0.4-7.2,1.1-12.6c-14.5-8.4-26-20.2-34.6-35.4
+      		C4.3,302.5,0,285.9,0,268c0-19,4.8-36.5,14.3-52.3c9.5-15.8,22.3-27.5,38.3-35.1c-4.2-11.4-6.3-22.9-6.3-34.3
+      		c0-27,9.1-50.1,27.4-69.1c18.3-19,40.2-28.6,65.7-28.6c11.4,0,22.3,2.1,32.6,6.3c8-16.4,19.5-29.6,34.6-39.7
+      		C221.6,5.1,238.1,0,256,0c17.9,0,34.4,5.1,49.4,15.1c15,10.1,26.6,23.3,34.6,39.7c10.3-4.2,21.1-6.3,32.6-6.3
+      		c25.5,0,47.3,9.5,65.4,28.6c18.1,19.1,27.1,42.1,27.1,69.1c0,12.6-1.9,24-5.7,34.3c16,7.6,28.8,19.3,38.3,35.1
+      		C507.2,231.5,512,249,512,268z M245.1,345.1l105.7-158.3c2.7-4.2,3.5-8.8,2.6-13.7c-1-4.9-3.5-8.8-7.7-11.4
+      		c-4.2-2.7-8.8-3.6-13.7-2.9c-5,0.8-9,3.2-12,7.4l-93.1,140L184,263.4c-3.8-3.8-8.2-5.6-13.1-5.4c-5,0.2-9.3,2-13.1,5.4
+      		c-3.4,3.4-5.1,7.7-5.1,12.9c0,5.1,1.7,9.4,5.1,12.9l58.9,58.9l2.9,2.3c3.4,2.3,6.9,3.4,10.3,3.4
+      		C236.6,353.7,241.7,350.9,245.1,345.1z"/>
+      </g>
+      </svg>:
+      <%= message.body %>
+    </span>
+    </div>
 
+    <div class="replies" style="display:block;">
+    <%= for x <- 0..Enum.random(1..12) do   %>
 
-      <div class="replies" style="display:block;">
-      <%= for x <- 0..Enum.random(1..12) do   %>
-
-          <div class="reply">
-            <img src="https://source.unsplash.com/collection/779101/60x60?sig=<%= Enum.random(1..200) %>" class="face"/>
-            <span>
-            <b><%=
-            list = ["Niki","Aundrea","Margie","Florida","So","Anna","Marcie","Ernestine","Velva","Madelene","Alphonse","Sabrina","Latoria","Clarine","Lessie","Nan","Mitsuko","Eugenia","Deandrea","Merlene","Annalisa","Chere","Jodee","Adaline","Tama","Drew","Emery","Chrystal","Roselia","Madeline","Shemika","Ivan","Soon","Serita","Damaris","Mabel","Ela","Jazmin","Clorinda","Vanita","Caroyln","Elise","Vilma","Brandi","Lucien","Luna","Kristina","Jinny","Enid","Liz"]
-            Enum.random(list)
-            %><%= Enum.random(1..1_000) %>:</b>
-            <a href="#">@<%= message.name %></a>
-            <%=
-              reply = [
-                "you are very smart!","lock her up!","you make a great point!","you are very handsome!","I also want to have sex with your daughter!","trump2020!","#maga","I agree, immigrants are bad!","democrats are dumb, you are smart","the art of the deal is a good book","you are very rich","you have a lot of money","you are rich and smart","good brain!","bringing back america!","you are right","good job","great job","that's my president!","AMERICA!","winning!","never sick of winning","america first!","putin is a strong leader","america and russia have a strong relationships. that's a good thing","i find you attractive","wharton is a good school","coal","wall!","border security is my top priority","email security is my top priority","i am impressed by the amount of money that you have","happy birthday","being rich is good","making deals!","america is back baby!","you are good at president"]
-            Enum.random(reply)
-             %>
-          </span>
-          </div>
-      <% end %>
+        <div class="reply">
+          <img src="https://source.unsplash.com/collection/779101/60x60?sig=<%= Enum.random(1..200) %>" class="face"/>
+          <span>
+          <b><%=
+          list = ["Niki","Aundrea","Margie","Florida","So","Anna","Marcie","Ernestine","Velva","Madelene","Alphonse","Sabrina","Latoria","Clarine","Lessie","Nan","Mitsuko","Eugenia","Deandrea","Merlene","Annalisa","Chere","Jodee","Adaline","Tama","Drew","Emery","Chrystal","Roselia","Madeline","Shemika","Ivan","Soon","Serita","Damaris","Mabel","Ela","Jazmin","Clorinda","Vanita","Caroyln","Elise","Vilma","Brandi","Lucien","Luna","Kristina","Jinny","Enid","Liz"]
+          Enum.random(list)
+          %><%= Enum.random(1..1_000) %>:</b>
+          <a href="#">@<%= message.name %></a>
+          <%=
+            reply = [
+              "you are very smart!","lock her up!","you make a great point!","you are very handsome!","I also want to have sex with your daughter!","trump2020!","#maga","I agree, immigrants are bad!","democrats are dumb, you are smart","the art of the deal is a good book","you are very rich","you have a lot of money","you are rich and smart","good brain!","bringing back america!","you are right","good job","great job","that's my president!","AMERICA!","winning!","never sick of winning","america first!","putin is a strong leader","america and russia have a strong relationships. that's a good thing","i find you attractive","wharton is a good school","coal","wall!","border security is my top priority","email security is my top priority","i am impressed by the amount of money that you have","happy birthday","being rich is good","making deals!","america is back baby!","you are good at president"]
+          Enum.random(reply)
+           %>
+        </span>
+        </div>
+    <% end %>
     </div>
     </div>
-   <% end %>
+    <% end %>
 </div>
 
 </section>
+
 <footer>
-
-        <span class="Footer-item Footer-copyright copyright">Very cool, very real app. Good for Presidents.</li>
-
-
-    </footer>
+<span>Very cool, very real app. Good for Presidents.</span>
+</footer>
