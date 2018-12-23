@@ -113,11 +113,12 @@ header h1 {
   border-radius: 100%;
   margin-right: .5em;
 }
-.message .verified{
-    fill: #1da1f2;
-    height:13px;
-    margin-bottom:-1px;
-    margin-left: 2px;
+
+.message .verified {
+  fill: #1da1f2;
+  height: 13px;
+  margin-bottom: -1px;
+  margin-left: 2px;
 }
 
 .reply {
