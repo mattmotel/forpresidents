@@ -22,7 +22,7 @@ let WaterCooler = {
       let chatBox = document.querySelector('#recent-tweet')
       let msgBlock = document.createElement('div')
 
-      msgBlock.insertAdjacentHTML('afterbegin', `<div class="tweet"><b>${payload.name}</b>: ${payload.body}</div>`)
+      msgBlock.insertAdjacentHTML('afterbegin', `<div class="tweet"><b>${payload.name}</b>: ${payload.body} <span class="tip">Great tweet! Tap to see who replied!</span></div>`)
       chatBox.appendChild(msgBlock)
     })
   }

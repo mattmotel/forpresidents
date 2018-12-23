@@ -37,17 +37,17 @@
 </header>
 
 <div class="post-tweet">
-  <h2>Hello @<%= @conn.params["user"] %>!</h2>
+
   <form id="chat-form">
       <input type="hidden" value="<%= @conn.params["user"] %>" id="user-name"></input>
-      <textarea placeholder="Who has crossed you most recently?" id="user-msg"></textarea>
-      <button type="submit">Tweet</button>
+      <textarea placeholder="Hello @<%= @conn.params["user"] %>! Who has crossed you most recently?" id="user-msg"></textarea>
+      <button type="submit">Share with the World</button>
   </form>
 </div>
 
 <section class="go-home">
 
-<div id="recent-tweet">
+<div id="recent-tweet"  onClick="window.location.reload()">
 </div>
 
 <div id="chat-box" class=" column-reverse">
@@ -80,12 +80,18 @@
     <%= for x <- 0..Enum.random(1..12) do   %>
 
         <div class="reply">
-          <img src="https://source.unsplash.com/collection/779101/60x60?sig=<%= Enum.random(1..200) %>" class="face"/>
+
+
+          <img src="https://source.unsplash.com/collection/<%=
+            unsplash = [
+              "779101","1597792","1416935"]
+          Enum.random(unsplash)
+           %>/60x60?sig=<%= Enum.random(1..200) %>" class="face"/>
           <span>
           <b><%=
           list = ["Niki","Aundrea","Margie","Florida","So","Anna","Marcie","Ernestine","Velva","Madelene","Alphonse","Sabrina","Latoria","Clarine","Lessie","Nan","Mitsuko","Eugenia","Deandrea","Merlene","Annalisa","Chere","Jodee","Adaline","Tama","Drew","Emery","Chrystal","Roselia","Madeline","Shemika","Ivan","Soon","Serita","Damaris","Mabel","Ela","Jazmin","Clorinda","Vanita","Caroyln","Elise","Vilma","Brandi","Lucien","Luna","Kristina","Jinny","Enid","Liz"]
           Enum.random(list)
-          %><%= Enum.random(1..1_000) %>:</b>
+          %><%= Enum.random(1..1_000) %></b>:
           <a href="#">@<%= message.name %></a>
           <%=
             reply = [

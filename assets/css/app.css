@@ -12,11 +12,11 @@ body {
   margin-right: .75em;
 }
 
-.st0 {
+.logo .st0 {
   fill: #0f1633;
 }
 
-.st1 {
+.logo .st1 {
   fill: #fff;
 }
 
@@ -46,6 +46,7 @@ header h1 {
   margin: 0;
 }
 
+
 .post-tweet {
   background-color: #f5f8fa;
   padding: 1em;
@@ -58,10 +59,14 @@ header h1 {
 .post-tweet form {
   margin-bottom: 0;
 }
+.post-tweet button {
+  margin-bottom: 0;
+}
 
 .post-tweet textarea {
   font-size: 1em;
   background-color: #fff;
+  margin-bottom: .5em;
 }
 
 .collapsible {
@@ -79,7 +84,7 @@ header h1 {
 }
 
 .go-home {
-  padding: 1em 1.5em;
+  padding: .75em;
 }
 
 /* show reverse by vertical column */
@@ -88,6 +93,11 @@ header h1 {
   flex-direction: column-reverse;
 }
 
+
+.tip{
+  color:#657786;
+  cursor: pointer;
+}
 .tweet {
   border-radius: .25em;
   background-color: #fff;
