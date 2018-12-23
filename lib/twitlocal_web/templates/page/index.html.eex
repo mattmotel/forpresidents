@@ -1,24 +1,17 @@
-
-
-<header><h1>Twitter for Presidents&trade;</h1>
+<header>
+  <h1>Twitter for Presidents&trade;</h1>
   <a class="collapsible"><span id="show" style="display:none;">Show</span><span id="hide">Hide</span> Replies</a></header>
 
   <div class="post-tweet">
   <h2>Hello @<%= @conn.params["user"] %>!</h2>
-
     <form id="chat-form">
         <input type="hidden" value="<%= @conn.params["user"] %>" id="user-name"></input>
-        <textarea placeholder="What you are thinking&#8253;" id="user-msg"></textarea>
+        <textarea placeholder="Who has crossed you most recently?" id="user-msg"></textarea>
         <button type="submit">Tweet</button>
       </form>
-
   </div>
 
 <section class="go-home">
-
-
-
-
 
 <div id="recent-tweet">
 </div>
@@ -32,7 +25,7 @@
 
 
       <div class="replies" style="display:block;">
-      <%= for x <- 0..Enum.random(1..7) do   %>
+      <%= for x <- 0..Enum.random(1..20) do   %>
 
           <div class="reply">
             <img src="<%=
@@ -45,20 +38,17 @@
             Enum.random(list)
             %><%= Enum.random(1..1_000) %>:</b>
             <a href="#">@<%= message.name %></a>
-            <%= reply = "you are very smart!"
-            reply %>
+            <%=
+              reply = [
+                "you are very smart!","lock her up!","you make a great point!","you are very handsome!","I also want to have sex with your daughter!","trump2020!","#maga","I agree, immigrants are bad!","democrats are dumb, you are smart","the art of the deal is a good book","you are very rich","you have a lot of money","you are rich and smart","good brain!"]
+            Enum.random(reply)
+             %>
           </span>
           </div>
       <% end %>
     </div>
-
-
     </div>
-     <% end %>
+   <% end %>
 </div>
-
-
-
-<%= #gettext "Welcome to %{name}!", name: "Phoenix" %>
 
 </section>
