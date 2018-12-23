@@ -1,0 +1,64 @@
+
+
+<header><h1>Twitter for Presidents&trade;</h1>
+  <a class="collapsible"><span id="show" style="display:none;">Show</span><span id="hide">Hide</span> Replies</a></header>
+
+  <div class="post-tweet">
+  <h2>Hello @<%= @conn.params["user"] %>!</h2>
+
+    <form id="chat-form">
+        <input type="hidden" value="<%= @conn.params["user"] %>" id="user-name"></input>
+        <textarea placeholder="What you are thinking&#8253;" id="user-msg"></textarea>
+        <button type="submit">Tweet</button>
+      </form>
+
+  </div>
+
+<section class="go-home">
+
+
+
+
+
+<div id="recent-tweet">
+</div>
+<div id="chat-box" class=" column-reverse">
+  <%= for message <- @messages do %>
+    <div class="tweet">
+      <div class="message">
+        <b><%= message.name %>:</b>
+        <%= message.body %>
+      </div>
+
+
+      <div class="replies" style="display:block;">
+      <%= for x <- 0..Enum.random(1..7) do   %>
+
+          <div class="reply">
+            <img src="<%=
+              faces = ["https://source.unsplash.com/collection/781477/50x50","https://source.unsplash.com/collection/895539/50x50","https://source.unsplash.com/collection/166572/50x50","https://source.unsplash.com/collection/1194/50x50","https://source.unsplash.com/collection/474205/50x50"]
+              Enum.random(faces)
+              %>" class="face"/>
+            <span>
+            <b><%=
+            list = ["Niki","Aundrea","Margie","Florida","So","Anna","Marcie","Ernestine","Velva","Madelene","Alphonse","Sabrina","Latoria","Clarine","Lessie","Nan","Mitsuko","Eugenia","Deandrea","Merlene","Annalisa","Chere","Jodee","Adaline","Tama","Drew","Emery","Chrystal","Roselia","Madeline","Shemika","Ivan","Soon","Serita","Damaris","Mabel","Ela","Jazmin","Clorinda","Vanita","Caroyln","Elise","Vilma","Brandi","Lucien","Luna","Kristina","Jinny","Enid","Liz"]
+            Enum.random(list)
+            %><%= Enum.random(1..1_000) %>:</b>
+            <a href="#">@<%= message.name %></a>
+            <%= reply = "you are very smart!"
+            reply %>
+          </span>
+          </div>
+      <% end %>
+    </div>
+
+
+    </div>
+     <% end %>
+</div>
+
+
+
+<%= #gettext "Welcome to %{name}!", name: "Phoenix" %>
+
+</section>

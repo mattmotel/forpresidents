@@ -1,0 +1,85 @@
+/* This file is for your main application css. */
+@import "./phoenix.css";
+
+body {
+  background-color: #e6ecf0;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #fff;
+  padding: 1em;
+  margin-bottom: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5em;
+  padding: 0;
+  margin: 0;
+}
+
+.post-tweet {
+  background-color: #f5f8fa;
+  padding: 1em;
+}
+
+.post-tweet form {
+  margin-bottom: 0;
+}
+
+.post-tweet textarea {
+  font-size: 1em;
+  background-color: #fff;
+}
+
+.collapsible {
+  cursor: pointer;
+}
+
+.go-home {
+  padding: 1em 1.5em;
+}
+
+/* show reverse by vertical column */
+.column-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.tweet {
+  border-radius: .25em;
+  background-color: #fff;
+  padding: .75em 1em;
+  margin: .5em 0;
+}
+
+.tweet:hover {
+  background-color: #f5f8fa;
+}
+
+.message {
+  font-size: 1.25em;
+  line-height: 1.1em;
+  padding: .5em 0;
+}
+
+.reply {
+  font-size: 1em;
+  line-height: 1.1em;
+  border-top: 1px solid #e6ecf0;
+  padding: 1em 0;
+  display: flex;
+  align-items: center;
+  color: gray;
+}
+
+.face {
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  margin-right: .5em;
+}
