@@ -31,7 +31,7 @@
      	l0.1,7.56l4.67-6.01l6.95,2.26l-4.16-6.55L82.84,171.03z M128.4,11.42l-4.67,6.01l-6.95-2.26l4.16,6.55l-3.97,6.24l6.84-2.43
      	l4.11,5.99l0.39-7.4l7.29-2.83l-7.09-2.3L128.4,11.42z"/>
      </svg>
-  <h1>Twitter for Presidents&trade;</h1>
+  <h1>Twitter for Presidents</h1>
   <a class="collapsible"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg> <span id="show" style="display:none;">Show</span><span id="hide">Hide</span> Replies</a></header>
 
   <div class="post-tweet">
@@ -51,8 +51,11 @@
   <%= for message <- @messages do %>
     <div class="tweet">
       <div class="message">
-        <b><%= message.name %>:</b>
+        <img src="https://pbs.twimg.com/profile_images/874276197357596672/kUuht00m_400x400.jpg">
+        <span>
+        <b><%= message.name %></b>:
         <%= message.body %>
+      </span>
       </div>
 
 
@@ -60,7 +63,7 @@
       <%= for x <- 0..Enum.random(1..20) do   %>
 
           <div class="reply">
-            <img src="https://source.unsplash.com/collection/779101/60x60?sig=<%= Enum.random(1..20) %>" class="face"/>
+            <img src="https://source.unsplash.com/collection/779101/60x60?sig=<%= Enum.random(1..200) %>" class="face"/>
             <span>
             <b><%=
             list = ["Niki","Aundrea","Margie","Florida","So","Anna","Marcie","Ernestine","Velva","Madelene","Alphonse","Sabrina","Latoria","Clarine","Lessie","Nan","Mitsuko","Eugenia","Deandrea","Merlene","Annalisa","Chere","Jodee","Adaline","Tama","Drew","Emery","Chrystal","Roselia","Madeline","Shemika","Ivan","Soon","Serita","Damaris","Mabel","Ela","Jazmin","Clorinda","Vanita","Caroyln","Elise","Vilma","Brandi","Lucien","Luna","Kristina","Jinny","Enid","Liz"]
@@ -81,3 +84,9 @@
 </div>
 
 </section>
+<footer>
+
+        <span class="Footer-item Footer-copyright copyright">Very cool, very real app. Good for Presidents.</li>
+
+
+    </footer>

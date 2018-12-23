@@ -26,6 +26,7 @@ a {
 
 button {
   background-color: #0f1633;
+  border: 1px solid #0f1633;
 }
 
 header {
@@ -66,17 +67,16 @@ header h1 {
 .collapsible {
   padding-left: 2em;
   cursor: pointer;
-  font-size:.8em;
-  font-weight:bold;
-}
-.collapsible svg{
-  height:20px;
-  fill:#657786;
-
-margin-right: -2px;
-margin-bottom: -6px;
+  font-size: .8em;
+  font-weight: bold;
 }
 
+.collapsible svg {
+  height: 20px;
+  fill: #657786;
+  margin-right: -2px;
+  margin-bottom: -6px;
+}
 
 .go-home {
   padding: 1em 1.5em;
@@ -92,7 +92,7 @@ margin-bottom: -6px;
   border-radius: .25em;
   background-color: #fff;
   padding: .75em 1em;
-  margin: .5em 0;
+  margin: .25em 0;
 }
 
 .tweet:hover {
@@ -100,19 +100,33 @@ margin-bottom: -6px;
 }
 
 .message {
-  font-size: 1.25em;
+  font-size: 1em;
   line-height: 1.1em;
   padding: .5em 0;
+  display: flex;
+  align-items: center;
+}
+
+.message img {
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  margin-right: .5em;
 }
 
 .reply {
   font-size: 1em;
   line-height: 1.1em;
   border-top: 1px solid #e6ecf0;
-  padding: 1em 0;
+  padding: .6em;
   display: flex;
   align-items: center;
-  color: gray;
+  color: #657786;
+}
+
+.reply:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 .face {
@@ -120,4 +134,10 @@ margin-bottom: -6px;
   width: 30px;
   border-radius: 100%;
   margin-right: .5em;
+}
+
+footer {
+  color: #657786;
+  font-size: .75em;
+  padding: .75em;
 }
