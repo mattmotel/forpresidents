@@ -60,10 +60,7 @@
       <%= for x <- 0..Enum.random(1..20) do   %>
 
           <div class="reply">
-            <img src="<%=
-              faces = ["https://source.unsplash.com/collection/781477/50x50","https://source.unsplash.com/collection/895539/50x50","https://source.unsplash.com/collection/166572/50x50","https://source.unsplash.com/collection/1194/50x50","https://source.unsplash.com/collection/474205/50x50"]
-              Enum.random(faces)
-              %>" class="face"/>
+            <img src="https://source.unsplash.com/collection/779101/60x60?sig=<%= Enum.random(1..20) %>" class="face"/>
             <span>
             <b><%=
             list = ["Niki","Aundrea","Margie","Florida","So","Anna","Marcie","Ernestine","Velva","Madelene","Alphonse","Sabrina","Latoria","Clarine","Lessie","Nan","Mitsuko","Eugenia","Deandrea","Merlene","Annalisa","Chere","Jodee","Adaline","Tama","Drew","Emery","Chrystal","Roselia","Madeline","Shemika","Ivan","Soon","Serita","Damaris","Mabel","Ela","Jazmin","Clorinda","Vanita","Caroyln","Elise","Vilma","Brandi","Lucien","Luna","Kristina","Jinny","Enid","Liz"]
