@@ -1,4 +1,9 @@
-# Twitlocal
+# For Presidents
+
+For Presidents is an app for Presidents only.
+If you are not a President, get out.
+This is a very cool and very good app.
+Share your thoughts with the world.
 
 To start your Phoenix server:
 
