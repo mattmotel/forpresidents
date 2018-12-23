@@ -84,7 +84,7 @@
 
           <img src="https://source.unsplash.com/collection/<%=
             unsplash = [
-              "779101","1597792","1416935"]
+              "779101","1597792","1416935","582659"]
           Enum.random(unsplash)
            %>/60x60?sig=<%= Enum.random(1..200) %>" class="face"/>
           <span>
@@ -95,7 +95,7 @@
           <a href="#">@<%= message.name %></a>
           <%=
             reply = [
-              "you are very smart!","lock her up!","you make a great point!","you are very handsome!","I also want to have sex with your daughter!","trump2020!","#maga","I agree, immigrants are bad!","democrats are dumb, you are smart","the art of the deal is a good book","you are very rich","you have a lot of money","you are rich and smart","good brain!","bringing back america!","you are right","good job","great job","that's my president!","AMERICA!","winning!","never sick of winning","america first!","putin is a strong leader","america and russia have a strong relationships. that's a good thing","i find you attractive","wharton is a good school","coal","wall!","border security is my top priority","email security is my top priority","i am impressed by the amount of money that you have","happy birthday","being rich is good","making deals!","america is back baby!","you are good at president"]
+              "you are very smart!","lock her up!","you make a great point!","you are very handsome!","I also want to have sex with your daughter!","trump2020!","#maga","I agree, immigrants are bad!","democrats are dumb, you are smart","the art of the deal is a good book","you are very rich","you have a lot of money","you are rich and smart","good brain!","bringing back america!","you are right","good job","great job","that's my president!","AMERICA!","winning!","never sick of winning","america first!","putin is a strong leader","america and russia have a strong relationships. that's a good thing","i find you attractive","wharton is a good school","coal","wall!","border security is my top priority","email security is my top priority","i am impressed by the amount of money that you have","happy birthday","being rich is good","making deals!","america is back baby!","you are good at president","i am a fan of yours","you are my best friend","your father approved of you","ivanka is sexy","these words are good","you are fit","this is a good tweet","i am impressed by this tweet","make america great again","you built a good wall","your wall is beautiful","you make jobs","so much winning","great!","hooray!","i like you","hilary is bad","you are good","you good","good president","POTUS right"]
           Enum.random(reply)
            %>
         </span>
