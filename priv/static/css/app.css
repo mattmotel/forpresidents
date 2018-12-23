@@ -141,6 +141,27 @@ body {
   padding: 0;
 }
 
+.logo {
+  width: 35px;
+  margin-right: .75em;
+}
+
+.st0 {
+  fill: #0f1633;
+}
+
+.st1 {
+  fill: #fff;
+}
+
+a {
+  color: #0f1633;
+}
+
+button {
+  background-color: #0f1633;
+}
+
 header {
   background-color: #fff;
   padding: 1em;
@@ -149,11 +170,11 @@ header {
   flex-wrap: nowrap;
   align-items: center;
   position: fixed;
-  top:0;
+  top: 0;
 }
 
 header h1 {
-  font-size: 1.5em;
+  font-size: 1.1em;
   padding: 0;
   margin: 0;
 }
@@ -163,7 +184,7 @@ header h1 {
   padding: 1em;
 }
 
-.post-tweet h2{
+.post-tweet h2 {
   font-size: 1.25em;
 }
 
@@ -177,9 +198,19 @@ header h1 {
 }
 
 .collapsible {
-  padding-left:1em;
+  padding-left: 2em;
   cursor: pointer;
+  font-size:.8em;
+  font-weight:bold;
 }
+.collapsible svg{
+  height:20px;
+  fill:#657786;
+
+margin-right: -2px;
+margin-bottom: -6px;
+}
+
 
 .go-home {
   padding: 1em 1.5em;
